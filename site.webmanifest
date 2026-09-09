@@ -1,0 +1,9 @@
+{
+  "name": "Ritham Sharma — Hardware & Systems Engineer",
+  "short_name": "Ritham Sharma",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f4ef",
+  "theme_color": "#10263b",
+  "icons": [{"src":"/assets/favicon.svg","sizes":"any","type":"image/svg+xml"}]
+}

@@ -5,6 +5,12 @@ const nav = document.querySelector('#site-nav');
 const progress = document.querySelector('.progress');
 const wipe = document.querySelector('.page-wipe');
 document.querySelector('.console-readout')?.setAttribute('aria-live', 'polite');
+if (!document.querySelector('link[rel="canonical"]')) {
+  const canonical = document.createElement('link');
+  canonical.rel = 'canonical';
+  canonical.href = `https://rithamsharma.github.io${location.pathname === '/index.html' ? '/' : location.pathname}`;
+  document.head.append(canonical);
+}
 if (!document.querySelector('link[rel="icon"]')) {
   const icon = document.createElement('link');
   icon.rel = 'icon';
