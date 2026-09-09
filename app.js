@@ -29,13 +29,6 @@ if (!document.querySelector('.skip')) {
   skip.textContent = 'Skip to content';
   document.body.prepend(skip);
 }
-document.querySelectorAll('.logo').forEach((brand) => {
-  const mark = brand.querySelector('b');
-  const label = brand.querySelector('span');
-  if (mark?.textContent.trim() === 'R') mark.textContent = 'RS';
-  if (label && !label.querySelector('small')) label.insertAdjacentHTML('beforeend', '<small>Hardware / systems</small>');
-});
-
 menu?.addEventListener('click', () => {
   const open = menu.getAttribute('aria-expanded') === 'true';
   menu.setAttribute('aria-expanded', String(!open));
