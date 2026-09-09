@@ -125,7 +125,7 @@ const closeLightbox = () => {
 document.querySelectorAll('.zoomable').forEach((figure) => {
   figure.tabIndex = 0;
   figure.setAttribute('role', 'button');
-  figure.setAttribute('aria-label', `${figure.querySelector('figcaption')?.textContent || 'Project artifact'} — open full size`);
+  figure.setAttribute('aria-label', `${figure.querySelector('figcaption')?.textContent || 'Project artifact'}. Open full size`);
   figure.addEventListener('click', () => openLightbox(figure));
   figure.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); openLightbox(figure); }
@@ -356,7 +356,7 @@ const caseDetails = {
     title: 'Keep the FPGA structure the GPU can exploit.',
     summary: 'A heterogeneous simulator that preserves useful FPGA macros, schedules their dependency graph and executes levelized waves through a verified CUDA path.',
     artifactTitle: 'The execution model, documented.',
-    artifactCopy: 'This report page explains primitive mapping, wave barriers and buffer placement—the decisions behind the measured speedups and the documented adverse cases.',
+    artifactCopy: 'This report page explains primitive mapping, wave barriers and buffer placement. These decisions produced the measured speedups and documented adverse cases.',
     artifactMeta: ['Technical report', 'Wave scheduling', 'Buffer rationale'],
     path: ['Yosys netlist', 'Native primitive graph', 'Kahn levelization', 'CUDA wave execution', 'CPU oracle'],
     decisions: [
